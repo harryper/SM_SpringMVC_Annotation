@@ -3,9 +3,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>hello</title>
+<title>welcome</title>
 </head>
 <body>
-${ requestScope.hello }
+${ requestScope.user.nickname } 欢迎你
+${ sessionScope.user.password } huanYingNi
 </body>
 </html>

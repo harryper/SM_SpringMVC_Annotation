@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -9,7 +9,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'index.jsp' starting page</title>
+    <title>login</title>
+    
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
@@ -18,9 +19,25 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
+
   </head>
   
   <body>
-  		<form method="get" action=""
+  	<form action="login" method="post">
+  		<table>
+    		<tr>
+	    		<td>用户名：</td>
+	    		<td><input type="text" id="username" name="username"></td>
+    		</tr>
+    		<tr>
+	    		<td>密　码:</td>
+	    		<td><input type="password" id="password" name="password"></td>
+    		</tr>
+    		<tr>
+	    		<td colspan="2"><input type="submit" value="登录"></td>
+    		</tr>
+    	
+    	</table>
+  	</form>
   </body>
 </html>
